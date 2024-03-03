@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="page-container">
+      <nav class="navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#roadmap">Roadmap</a>
+        <button onclick="location.href='http://your-external-link.com'">
+          Buy now
+        </button>
+      </nav>
+      <header class="page-header">
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+          <a
+            href="https://twitter.com/StudyAgainSOL"
+            target="_blank"
+            aria-label="Twitter"
+            style="color: white"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://t.me/StudyAgainOnSOL"
+            target="_blank"
+            aria-label="Telegram"
+            style="color: white"
+          >
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+          <!-- Custom Images for birdeye and Solscan -->
+          <a
+            href="https://birdeye.so/token/GWdFcYSbpQLywCe5qQkBPeojHGQHmX3L16SQM9mq9fCt?chain=solana"
+            target="_blank"
+            aria-label="Birdeye"
+          >
+            <img
+              src="images/birdeye.png"
+              alt="Birdeye Icon"
+              class="birdeye-logo"
+            />
+          </a>
+          <a
+            href="https://solscan.io/token/GWdFcYSbpQLywCe5qQkBPeojHGQHmX3L16SQM9mq9fCt"
+            target="_blank"
+            aria-label="Solscan"
+          >
+            <img
+              src="images/solscan.png"
+              alt="Solscan Icon"
+              class="solscan-logo"
+            />
+          </a>
+          <a href="https://solscan.io/" target="_blank" aria-label="radiyum">
+            <img
+              src="images/radiyum.png"
+              alt="Solscan Icon"
+              class="radiyum-logo"
+            />
+          </a>
+        </div>
+      </header>
+      <main class="main-content">
+        <section class="section hero" id="home">
+          <img
+            src="images/background-image.png"
+            alt="Retro Game Image"
+            class="center-image"
+          />
+        </section>
+        <section class="section about" id="about">
+          <h2>About</h2>
+          <p>
+            A lot of people are asking, "Where does the Study Again meme come
+            from?"<br /><br />
+            "Why is it so big on CT now?"<br /><br />
+            "What does it mean?"<br /><br />
+            I tell them study again GCR.<br /><br />
+            Remilio.
+          </p>
+        </section>
+        <section class="section tokenomics" id="tokenomics">
+          <h2>Tokenomics</h2>
+          <p>Name - $STUDY AGAIN</p>
+          <p>Total supply - 1,000,000,000</p>
+          <p>Buy tax - 0%</p>
+          <p>Sell tax - 0%</p>
+          <p>Token Address -</p>
+        </section>
+        <section class="section roadmap" id="roadmap">
+          <h2>Roadmap</h2>
+          <p>Study Again</p>
+        </section>
+        <section class="section buy-now">
+          <h2>Contact</h2>
+          <p>Reach out through X or Telegram.</p>
+        </section>
+      </main>
+      <footer class="page-footer">
+        <div class="social-icons">
+          <a
+            href="https://twitter.com/StudyAgainSOL"
+            class="social-icon"
+            target="_blank"
+            aria-label="Twitter"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://t.me/StudyAgainOnSOL"
+            class="social-icon"
+            target="_blank"
+            aria-label="Telegram"
+          >
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+        </div>
+        <p>
+          $STUDY AGAIN is a meme coin with no intrinsic value or expectation of
+          financial return. There is no formal team or roadmap. The coin is
+          completely useless and for entertainment purposes only.
+        </p>
+      </footer>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".navigation a").forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

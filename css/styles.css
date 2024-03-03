@@ -1,0 +1,337 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full page container */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url("../images/stars-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; /* Adjust the weight as needed */
+  font-size: 18px; /* This sets a base font size for the entire page */
+}
+
+/* Container for all page content */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Navigation styling */
+.navigation {
+  display: flex; /* Align children in a row */
+  justify-content: center; /* Center buttons horizontally */
+  flex-wrap: nowrap; /* Prevent wrapping of items */
+  background: none;
+  padding-top: 2rem;
+  margin-bottom: 3rem; /* Add space below the navigation buttons */
+}
+
+.navigation a,
+.navigation button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 800; /* Adjust the weight as needed */
+  text-decoration: none; /* Remove underline for <a> */
+}
+
+/* Add this to your existing CSS */
+.navigation a:hover,
+.navigation button:hover {
+  background: white;
+  color: black;
+}
+
+/* Header styling */
+.page-header h1 {
+  padding-top: 4rem;
+  font-size: 7rem; /* Larger font size for the title */
+  margin: 2rem 0;
+  color: white;
+  text-shadow: 3px 3px 0px #000;
+}
+
+/* Main content styling */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero section styling */
+.hero .center-image {
+  width: 100%; /* Forces the image to take the full width of its container */
+  max-width: 100%; /* Ensures the image doesn't exceed the container's width */
+  height: auto; /* Keeps the aspect ratio of the image */
+}
+
+/* Section styling */
+.section {
+  width: 80%;
+  margin: auto;
+  padding: 1.5rem 0;
+}
+
+.section h2 {
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: left;
+  border-bottom: 1px solid white;
+  font-size: 1.8rem; /* Larger font size for the title */
+}
+
+.section p {
+  padding: 0.5rem 0;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+/* Footer styling */
+.page-footer {
+  margin-top: 0rem;
+  padding: 2rem 0;
+  background: none;
+}
+
+.page-footer p {
+  font-size: 0.6rem; /* Adjust this value to set the desired font size */
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  line-height: 1.6;
+  color: #aaa;
+}
+
+.social-icons {
+  padding: 0rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center; /* Center the icons horizontally */
+  gap: 3rem; /* Space between icons */
+}
+
+.social-icons a {
+  color: white; /* Icon color */
+  text-decoration: none; /* Remove underline from icons */
+}
+
+.social-icons a i.fab {
+  font-size: 2.5rem; /* Font Awesome icon size */
+}
+
+/* Set custom heights for individual images */
+.birdeye-logo {
+  height: 35px;
+  width: 37px; /* Add 'px' here */
+}
+
+.solscan-logo {
+  height: 37px;
+  width: 37px;
+}
+
+.radiyum-logo {
+  height: 39px;
+  width: 36px;
+}
+
+.social-icons a:hover {
+  color: #aaa; /* Color for hover state */
+}
+
+/* Style for active state on mobile */
+@media (max-width: 768px) {
+  .navigation a:active,
+  .navigation button:active {
+    background: none;
+    color: white;
+  }
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .navigation button {
+    font-size: 0.5rem; /* Further reduce font size for smaller screens */
+    padding: 0.2rem 0.4rem; /* Adjust padding */
+  }
+}
+
+/* Container to maintain aspect ratio */
+/* Container to maintain aspect ratio */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-top: 80.25%; /* Adjust this for a 16:9 Aspect Ratio */
+  overflow: hidden; /* Hide any overflow */
+}
+
+/* Iframe styling */
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none; /* Removes the border */
+  transform-origin: 0 0; /* Set the origin of transformation */
+}
+
+/* Adjust scaling based on different screen sizes */
+@media (max-width: 5000) {
+  iframe {
+    transform: scale(0.9); /* Adjust scale to fit content without cutting off */
+    width: 106.67%; /* Set the width to match the scaled size */
+    height: 100.89%; /* Set the height to match the scaled size */
+  }
+  .iframe-container {
+    padding-top: 93.89%;
+  } /* Adjust for 16:9 Aspect Ratio at scale 0.9 */
+}
+
+@media (max-width: 576px) {
+  iframe {
+    transform: scale(0.4); /* Adjust scale to fit content without cutting off */
+    width: 250%; /* Set the width to match the scaled size */
+    height: 250%; /* Set the height to match the scaled size */
+  }
+  .iframe-container {
+    padding-top: 130.67%; /* Adjust padding-top to reduce excess space */
+  }
+}
+
+@media (max-width: 450px) {
+  iframe {
+    transform: scale(
+      0.33
+    ); /* Adjust scale to fit content without cutting off */
+    width: 300%; /* Set the width to match the scaled size */
+    height: 300%; /* Set the height to match the scaled size */
+  }
+  .iframe-container {
+    padding-top: 155%; /* Adjust padding-top to reduce excess space */
+  }
+}
+
+@media (max-width: 329px) {
+  iframe {
+    transform: scale(
+      0.28
+    ); /* Adjust scale to fit content without cutting off */
+    width: 370%; /* Set the width to match the scaled size */
+    height: 250%; /* Set the height to match the scaled size */
+  }
+  .iframe-container {
+    padding-top: 190.67%; /* Adjust padding-top to reduce excess space */
+  }
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .section p {
+    font-size: smaller; /* Adjust font size for readability */
+    line-height: 1.9; /* Adjust line height for better text spacing */
+  }
+
+  .navigation {
+    justify-content: flex-start; /* Align items to the start */
+    flex-wrap: wrap; /* Allow items to wrap */
+  }
+
+  .navigation a,
+  .navigation button {
+    font-size: 0.8rem; /* Smaller font size */
+    padding: 8px 10px; /* Adjust padding */
+    margin: 5px; /* Adjust margin */
+    flex-basis: calc(
+      50% - 10px
+    ); /* Set basis to half of container width minus margin */
+    text-align: center; /* Center the text */
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  .page-header h1 {
+    font-size: 4.5rem; /* Adjust title font size */
+  }
+
+  /* Adjust Font Awesome icons */
+  /* Adjust Font Awesome icons */
+  .social-icons a i.fab {
+    font-size: 2rem; /* Consistent font size for all icons */
+  }
+
+  /* Uniform scaling for logos */
+  .birdeye-logo,
+  .solscan-logo {
+    height: 28px; /* Set a uniform height for these logos */
+    width: auto; /* Maintain aspect ratio */
+  }
+
+  .radiyum-logo {
+    height: 32px; /* Set a uniform height for radiyum logo */
+    width: auto; /* Maintain aspect ratio */
+  }
+
+  /* Increased gap between icons and logos */
+  .social-icons {
+    gap: 1.5rem; /* Increase gap for better spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation a,
+  .navigation button {
+    font-size: 0.7rem; /* Even smaller font size */
+    padding: 6px 8px; /* Padding around the buttons */
+    margin: 5px; /* Add margin between buttons */
+    flex-basis: calc(
+      50% - 10px
+    ); /* Set basis to half of container width minus margin */
+  }
+
+  .page-header h1 {
+    font-size: 3rem; /* Smaller title font size */
+  }
+
+  /* Further adjust Font Awesome icons */
+  .social-icons a i.fab {
+    font-size: 1.7rem; /* Slightly smaller font size for smaller screens */
+  }
+
+  /* Further scaling for logos */
+  .birdeye-logo,
+  .solscan-logo {
+    height: 25px; /* Slightly smaller uniform height for logos */
+  }
+
+  .radiyum-logo {
+    height: 25px; /* Ensure radiyum logo is consistent with others */
+  }
+
+  /* Further increased gap for smaller screens */
+  .social-icons {
+    gap: 1.7rem; /* Slightly larger gap for smaller screens */
+  }
+}
